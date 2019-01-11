@@ -45,15 +45,11 @@ public class Louloudis_SpellChecker {
 						}
 		
 		input.close();
+		compareList.removeAll(dictionaryList);
 		
-		List<String> Dictionary = dictionaryList;
-		List<String> Comparable = compareList;
-		
-		Comparable.removeAll(Dictionary);
-		
-		for(String word: Comparable){
+		for(String word: compareList){
 			
-		System.out.print(word + ", ");
+		System.out.print(" " + word + " " + "is an unknown word. \n");
 		}
 	}
 }
